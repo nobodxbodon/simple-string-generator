@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.8/angular.min.js"></script>
+        <script src="gen.js"></script>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div ng-controller="GenCtrl">
+            Explore width:<input type="number" ng-model="LIMIT" ng-init="LIMIT=20" id="limit" focus required>
+            <input ng-click="start()" type="button" Value="Start">
+            <input ng-click="stop()" type="button" value="Stop">
+            <input ng-click="reset()" type="button" value="Reset">
+            <input ng-click="dummy()" type="button" Value="Refresh Page">
+            <span>{{seedArray.length}} characters found:{{seedArray}}</span>
+            <span>{{codes.length}} codes generated:{{codes}}</span><br>
+            <span>Details:</span><br>
+            <div ng-repeat="msg in messages">
+                <span>{{msg}}</span><br>
+            </div>
+            
+        </div>
+    </body>
+</html>
